@@ -3,7 +3,7 @@ import json
 import time
 from bs4 import BeautifulSoup as bs
 
-team = "Leeds United"
+team = "Boavista"
 currentscore = 0
 
 def ScrapeScore():
@@ -17,14 +17,15 @@ def ScrapeScore():
         away= match["team_score_b"]
 
         if home["team"]["name"] == team:
+            global currentscore
             oldscore = currentscore
-            currentscore = home["score"][0]["score"]
+            currentscore = home["score"][0]["score"] #CURRENT SCORE IS CHANGED HERE
             if currentscore != oldscore:
-               # SEND SMS 
+                print("currentscore: " + str(currentscore) + " old score:" + str(oldscore))
                 print("{} {} - {} {}".format(home["team"]["name"], home["score"][0]["score"], away["score"][0]["score"], away["team"]["name"]))
+        
 
-
-    time.sleep(60)
-    ScrapeScore()        
-
+    time.sleep(30)
+    ScrapeScore()
+    
 ScrapeScore()

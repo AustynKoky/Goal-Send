@@ -10,6 +10,6 @@ def sendSMS(apikey, numbers, sender, message):
     fr = f.read()
     return(fr)
  
-resp =  sendSMS('0NSUV4UG8RI-YvAmaTvH17jQLhwcQRPq7JnTlmz7IO', '353852704841, 353858158414',
-    'Koky', 'Hello this is a test')
+resp =  sendSMS('0NSUV4UG8RI-YvAmaTvH17jQLhwcQRPq7JnTlmz7IO', '353830553282',
+    'GoalSend', 'Your payment of €35.00 to Pornhub has been approved. Thank you for the subscribing..')
 print (resp)
