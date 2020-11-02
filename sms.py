@@ -10,6 +10,6 @@ def sendSMS(apikey, numbers, sender, message):
     fr = f.read()
     return(fr)
  
-resp =  sendSMS('0NSUV4UG8RI-YvAmaTvH17jQLhwcQRPq7JnTlmz7IO', '447799882038',
+resp =  sendSMS('0NSUV4UG8RI-YvAmaTvH17jQLhwcQRPq7JnTlmz7IO', '353852704841, 353858158414',
     'Koky', 'Hello this is a test')
 print (resp)
