@@ -22,10 +22,7 @@ def ScrapeScore():
             currentscore = home["score"][0]["score"] #CURRENT SCORE IS CHANGED HERE
             if currentscore != oldscore:
                 print("currentscore: " + str(currentscore) + " old score:" + str(oldscore))
-                print("{} {} - {} {}".format(home["team"]["name"], home["score"][0]["score"], away["score"][0]["score"], away["team"]["name"]))
-        
-
-    time.sleep(30)
-    ScrapeScore()
+                print("{} {} - {} {}".format(home["team"]["name"], home["score"][0]["score"], away["score"][0]["score"], away["team"]["name"]))         
+                
     
 ScrapeScore()
