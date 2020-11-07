@@ -20,7 +20,7 @@ def ScrapeScore(currentscore, team):
                 print("currentscore: " + str(currentscore) + " old score:" + str(oldscore))
                 notification = "({}) {} [{}] - {} [{}] ".format(match["clock"], home["team"]["name"], home["score"][0]["score"], away["team"]["name"], away["score"][0]["score"])
                 print(notification) 
-                sms.sendSMS('5IDrV18jaeo-dalDi7VyEEoVaDtQjvW5GBb46kA3DP', '353858158414, 353852704841', 'GoalSend', notification)
+                sms.sendSMS('APIKEY FROM textlocal.com', 'PHONE NUMBER', 'Goal Send', notification)
                 continue
     return currentscore
 
